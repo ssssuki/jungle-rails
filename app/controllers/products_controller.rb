@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  include HttpAuthConcern
 
   def index
     @products = Product.all.order(created_at: :desc)
